@@ -1,0 +1,13 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/explorer",
+    "apiInfo": {
+      "title": "Tenpo Challenge API",
+      "description": "Aplicación para sumar números",
+      "contact": "benitezluciano@gmail.com"
+    },
+    "uiDirs": [
+      "./server/swaggerUI/"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Client",
+  "plural": "clients",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+  },
+  "validations": [],
+  "relations": {
+    "operations": {
+      "type": "hasMany",
+      "model": "Operation",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+  ],
+  "methods": {}
+}

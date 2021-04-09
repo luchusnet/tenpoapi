@@ -1,0 +1,12 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "tenpodb": {
+    "url": "postgres://postgres:postgres@localhost:5432/tenpoapi",
+    "name": "tenpodb",
+    "connector": "postgresql",
+    "debug": true
+  }
+}

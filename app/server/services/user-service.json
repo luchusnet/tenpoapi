@@ -1,0 +1,163 @@
+{
+  "name": "UserService",
+  "plural": "usersServices",
+  "base": "Model",
+  "http": {"path": "/user"},
+  "idInjection": true,
+  "hidden": ["realm", "id"],
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY",
+      "property": "sum"
+    },    
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "user",
+      "permission": "ALLOW",
+      "property": "sum"
+    } 
+  ],
+  "methods": {
+    "login": {
+      "accepts": [
+        {
+          "arg": "username",
+          "type": "string",
+          "required": true,
+          "description": "a Username"
+        },
+        {
+          "arg": "password",
+          "type": "string",
+          "required": true,
+          "description": "a Password"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "Response",
+          "type": "string",
+          "root": true,
+          "description": "A user"
+        }
+      ],
+      "description": "Login a User",
+      "http": [
+        {
+          "path": "/login",
+          "verb": "POST"
+        }
+      ]
+    },
+    "register": {
+      "accepts": [
+        {
+          "arg": "username",
+          "type": "string",
+          "required": true,
+          "description": "a Username"
+        },
+        {
+          "arg": "password",
+          "type": "string",
+          "required": true,
+          "description": "a Password"
+        },
+        {
+          "arg": "email",
+          "type": "string",
+          "required": true,
+          "description": "a Email"
+        }        
+      ],
+      "returns": [
+        {
+          "arg": "Response",
+          "type": "string",
+          "root": true,
+          "description": "A user"
+        }
+      ],
+      "description": "Register a User",
+      "http": [
+        {
+          "path": "/register",
+          "verb": "POST"
+        }
+      ]
+    },
+    "sum": {
+      "accepts": [
+        {
+          "arg": "operandA",
+          "type": "number",
+          "required": true,
+          "description": "Operando A"
+        },
+        {
+          "arg": "operandB",
+          "type": "number",
+          "required": true,
+          "description": "Operando B"
+        },  
+        {"arg": "options", "type": "object", "http": "optionsFromRequest"}      
+      ],
+      "returns": [
+        {
+          "arg": "Response",
+          "type": "number",
+          "root": true,
+          "description": "A result"
+        }
+      ],
+      "description": "Return the sum result ",
+      "http": [
+        {
+          "path": "/sum/:operandA/:operandB",
+          "verb": "POST"
+        }
+      ]
+    },
+    "operations": {
+      "accepts": [
+        {
+          "arg": "userId",
+          "type": "number",
+          "required": true,
+          "description": "An userid"
+        } 
+      ],
+      "returns": [
+        {
+          "arg": "Response",
+          "type": "object",
+          "root": true,
+          "description": "A list of user operations"
+        }
+      ],
+      "description": "A list of user operations",
+      "http": [
+        {
+          "path": "/:userId/operations",
+          "verb": "GET"
+        }
+      ]
+    }               
+  }
+}

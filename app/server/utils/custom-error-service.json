@@ -1,0 +1,11 @@
+{
+  "name": "CustomErrorService",
+  "plural": "customErrorServices",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}  
+}

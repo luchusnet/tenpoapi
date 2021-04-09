@@ -1,0 +1,31 @@
+{
+  "name": "Operation",
+  "plural": "operations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "operandA": {
+      "type": "number",
+      "required": true
+    },
+    "operandB": {
+      "type": "number",
+      "required": true
+    },   
+    "result": {
+      "type": "number"
+    },
+    "modification": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {   
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  tenpoapp:
+    container_name: tenpobd
+    build:
+      context: . 
+    image: luchus/tenpobd
+    ports:
+      - '5432:5432'
+    restart: always

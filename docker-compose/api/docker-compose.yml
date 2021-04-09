@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  tenpoapp:
+    container_name: tenpoapi
+    build:
+      context: ./../../app 
+      args:
+        node_env: ${NODE_ENV}       
+    image: luchus/tenpoapi
+    ports:
+      - "3000:3000"
+    environment:
+        - NODE_ENV=${NODE_ENV}
+    restart: always

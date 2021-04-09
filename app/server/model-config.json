@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./services",
+      "./middleware",
+      "./utils",
+      "./repositories"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "tenpodb",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "tenpodb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "tenpodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "tenpodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "tenpodb",
+    "public": false
+  },
+  "Client": {
+    "dataSource": "tenpodb",
+    "public": false
+  },  
+  "Operation": {
+    "dataSource": "tenpodb",
+    "public": false
+  },   
+  "UserService": {
+    "dataSource": null,
+    "public": true
+  },
+  "CustomErrorService": {
+    "dataSource": null,
+    "public": false
+  },
+  "UserRepository": {
+    "dataSource": null,
+    "public": false
+  }  
+}

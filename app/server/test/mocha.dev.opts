@@ -1,0 +1,7 @@
+--exit
+--recursive
+--env=test
+--require=env-test
+--colors
+--reporter spec
+--timeout 20000
