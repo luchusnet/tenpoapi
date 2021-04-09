@@ -6,7 +6,7 @@ Este es un prototipo para el challenge Tenpo
 ## GCP
 
 El ambiente fué desplegado utilizando Terraform. El archivo de configuracion se encuentra en /gcp
-ToDos: - Configurar un load balancer para poder brindar seguridad y definir un certificado ssl a nivel de balanceador. De esta form la vm dejará de tener ip publica.
+  - ToDos: - Configurar un load balancer para poder brindar seguridad y definir un certificado ssl a nivel de balanceador. De esta form la vm dejará de tener ip publica.
 
 ## Backend API
 
