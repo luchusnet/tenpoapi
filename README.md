@@ -31,9 +31,9 @@ Ejemplo de un request: http://35.225.85.152:3000/api/user/sum/1/2?access_token=r
 
 - Se debe crear una base en postgres llamada: tenpoapi. El esquema será creado en el la primera ejecución.
 - Para la aplicación de api sobre la carpeta /app:
-  -- npm install
-  -- Definir la variable de entorno NODE_ENV (local o testing)
-  -- npm .
+  1 npm install
+  2 Definir la variable de entorno NODE_ENV (local o testing)
+  3 node .
 
 ### Docker builds
 
